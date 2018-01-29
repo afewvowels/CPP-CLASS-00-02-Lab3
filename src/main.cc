@@ -14,7 +14,7 @@ int main() {
     int searchIndex = 5;
 
     map<int,string> testDictionary;
-    map<int,string>:: iterator it;
+    map<int,string>::iterator it;
 
     testDictionary[0] = string("Word1");
     testDictionary[1] = string("Word2");
@@ -28,7 +28,7 @@ int main() {
       // throw InvalidIndexException();
       it = testDictionary.find(searchIndex);
       if(it == testDictionary.end())
-        throw KeyNotFoundException();
+        throw KeyNotFoundException(to_string(searchIndex));
       // testString[25] = 'a';
     }
 
@@ -38,7 +38,7 @@ int main() {
 
     catch (KeyNotFoundException e) {
       // e.storeKey(badKey);
-      cout << e.toString(to_string(searchIndex)) << endl;
+      cout << e.toString() << endl;
     }
 
     // catch (InvalidIndexException e) {
