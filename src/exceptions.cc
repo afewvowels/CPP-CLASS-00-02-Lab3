@@ -55,7 +55,7 @@ const string KeyNotFoundException::toString(string key) {
       msg = source() + ":_)";
     else
       msg = "";
-    msg += "key_not_found_exception_bad_key: " + key + "\n";
+    msg += "key_not_found_exception_bad_key: " + key;
 
     return msg;
 }
@@ -72,7 +72,7 @@ const string InvalidIndexException::toString(int index) {
     msg = source() + ":_)";
   else
     msg = "";
-  msg += "invalid_index_exception_index_" + to_string(index) + "\n";
+  msg += "invalid_index_exception_index_" + to_string(index);
 
   return msg;
 }
