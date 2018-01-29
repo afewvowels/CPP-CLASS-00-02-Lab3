@@ -7,10 +7,12 @@ using namespace std;
 
 int main() {
 
-    string testString = "";
+    string testString = "TEST_STRING";
+    string badKey = "BAD_KEY";
+
+    int badIndex = 23;
 
     try {
-      testString = fillString();
       // throw ContainerEmptyException();
       // throw KeyNotFoundException();
       throw InvalidIndexException();
@@ -21,22 +23,16 @@ int main() {
     // }
 
     // catch (KeyNotFoundException e) {
-    //   e.storeKey("badkey");
-    //   cout << e.toString() << endl;
+    //   // e.storeKey(badKey);
+    //   cout << e.toString(badKey) << endl;
     // }
 
     catch (InvalidIndexException e) {
-        e.storeIndex(10);
-        cout << e.toString() << endl;
+        // e.storeIndex(10);
+        cout << e.toString(badIndex) << endl;
     }
 
     // cout << testString << endl;
 
     return 0;
-}
-
-string fillString() {
-  string str = "string size";
-
-  return str;
 }

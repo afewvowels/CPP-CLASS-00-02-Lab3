@@ -3,5 +3,3 @@
 //
 //
 //#endif
-
-string fillString();

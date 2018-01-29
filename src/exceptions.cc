@@ -41,9 +41,15 @@ const string ContainerFullException::toString(void) {
     return msg;
 }
 
-const string KeyNotFoundException::toString(void) {
+// KeyNotFoundException::KeyNotFoundException(string key, string src) {
+//   key = key;
+//   src = src;
+// }
+
+const string KeyNotFoundException::toString(string key) {
   string
     msg;
+    // key = tempKey;
 
     if(source().length() > 0)
       msg = source() + ":_)";
@@ -54,11 +60,11 @@ const string KeyNotFoundException::toString(void) {
     return msg;
 }
 
-void KeyNotFoundException::storeKey(string tempKey) {
-    key = tempKey;
-}
+// void KeyNotFoundException::storeKey(string tempKey) {
+//     key = tempKey;
+// }
 
-const string InvalidIndexException::toString(void) {
+const string InvalidIndexException::toString(int index) {
   string
     msg;
 
@@ -71,6 +77,6 @@ const string InvalidIndexException::toString(void) {
   return msg;
 }
 
-void InvalidIndexException::storeIndex(int tempIndex) {
-  index = tempIndex;
-}
+// void InvalidIndexException::storeIndex(int tempIndex) {
+//   index = tempIndex;
+// }
