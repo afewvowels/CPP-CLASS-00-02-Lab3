@@ -41,8 +41,8 @@ class KeyNotFoundException : public Exception {
 public:
   KeyNotFoundException(string key="", string src="") : Exception(src) { }
   ~KeyNotFoundException(void) { }
-  const string toString(void);
-  void storeKey(string);
+  const string toString(string key);
+  // void storeKey(string);
 private:
   string
     key;
@@ -52,8 +52,8 @@ class InvalidIndexException : public Exception {
 public:
   InvalidIndexException(int index=-1, string src="") : Exception(src) { }
   ~InvalidIndexException(void) { }
-  const string toString(void);
-  void storeIndex(int);
+  const string toString(int index);
+  // void storeIndex(int);
 private:
   int
     index;
