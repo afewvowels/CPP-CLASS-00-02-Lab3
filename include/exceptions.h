@@ -39,10 +39,9 @@ public:
 
 class KeyNotFoundException : public Exception {
 public:
-  KeyNotFoundException(string key="", string src="") : Exception(src) { }
+  KeyNotFoundException(string key="", string src="") : Exception(src) { this->key = key; }
   ~KeyNotFoundException(void) { }
   const string toString(void);
-  void storeKey(string);
 private:
   string
     key;
@@ -50,10 +49,9 @@ private:
 
 class InvalidIndexException : public Exception {
 public:
-  InvalidIndexException(int index=-1, string src="") : Exception(src) { }
+  InvalidIndexException(int index=-1, string src="") : Exception(src) { this->index = index; }
   ~InvalidIndexException(void) { }
   const string toString(void);
-  void storeIndex(int);
 private:
   int
     index;
